@@ -1,0 +1,16 @@
+{
+  "name": "@repo/jwt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "@types/jsonwebtoken": "^9.0.9"
+  }
+}

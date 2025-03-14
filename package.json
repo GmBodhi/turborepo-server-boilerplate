@@ -1,0 +1,27 @@
+{
+  "name": "turborepo-server-starter",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "dotenv -- turbo run dev",
+    "format": "prettier --write \"**/*.{ts,md,json}\"",
+    "type-check": "turbo run type-check",
+    "db:migrate": "turbo db:migrate",
+    "db:generate:": "turbo db:generate",
+    "db:deploy": "turbo db:deploy"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^8.0.0",
+    "prettier": "^3.5.3",
+    "turbo": "^2.4.4",
+    "typescript": "5.8.2",
+    "@repo/core": "workspace:*",
+    "@repo/db": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/crypto": "workspace:*"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

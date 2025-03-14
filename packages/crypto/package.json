@@ -1,0 +1,19 @@
+{
+  "name": "@repo/crypto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "browser": {
+    "crypto": false
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "crypto-js": "^4.2.0"
+  }
+}
