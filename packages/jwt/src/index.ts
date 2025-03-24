@@ -28,7 +28,7 @@ export function generateToken(
   const secretKey = getSecret(options.secret);
 
   const signOptions: SignOptions = {
-    expiresIn: options.expiresIn as any,
+    expiresIn: options.expiresIn as number | undefined,
   };
 
   return jwt.sign(payload, secretKey, signOptions);

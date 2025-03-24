@@ -2,7 +2,7 @@ import { createHash, randomBytes } from "crypto";
 
 export function generateHash(
   digest: "base64" | "base64url" | "hex",
-  payload: Record<any, string>,
+  payload: Record<string, string>,
 ) {
   const timestamp = Date.now();
 

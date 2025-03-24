@@ -1,14 +1,16 @@
 {
-  "name": "turborepo-server-starter",
+  "name": "boilerplate",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "dotenv -- turbo run dev",
     "format": "prettier --write \"**/*.{ts,md,json}\"",
-    "type-check": "turbo run type-check",
-    "db:migrate": "turbo db:migrate",
-    "db:generate:": "turbo db:generate",
-    "db:deploy": "turbo db:deploy"
+    "lint": "turbo lint",
+    "check-types": "turbo run check-types",
+    "db:migrate": "turbo run db:migrate",
+    "db:reset": "turbo run db:reset",
+    "db:generate:": "turbo run db:generate",
+    "db:deploy": "turbo run db:deploy"
   },
   "devDependencies": {
     "dotenv-cli": "^8.0.0",
@@ -18,7 +20,9 @@
     "@repo/core": "workspace:*",
     "@repo/db": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@repo/crypto": "workspace:*"
+    "@repo/crypto": "workspace:*",
+    "@repo/jwt": "workspace:*",
+    "@repo/eslint-config": "workspace:*"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {

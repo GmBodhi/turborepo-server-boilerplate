@@ -2,17 +2,21 @@
   "name": "@repo/db",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "src/services/index.ts",
   "types": "src/services/index.ts",
   "scripts": {
     "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
+    "db:migrate": "prisma migrate dev --name update",
     "db:deploy": "prisma migrate deploy",
-    "type-check": "tsc --noEmit"
+    "db:reset": "prisma migrate reset",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0"
   },
   "exports": {
     ".": "./src/index.ts",
-    "./services": "./services/index.ts"
+    "./services": "./src/services/index.ts",
+    "./client": "./src/client/index.ts"
   },
   "keywords": [],
   "author": "",
