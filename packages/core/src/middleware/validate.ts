@@ -1,6 +1,6 @@
 import { type ZodType } from "zod";
-import { exceptionResponse } from "../response";
-import { UnprocessableEntityError } from "../exceptions";
+import { exceptionResponse } from "@repo/core/response";
+import { UnprocessableEntityError } from "@repo/core/exceptions";
 import { Request, Response, NextFunction } from "express";
 
 export const validate = (

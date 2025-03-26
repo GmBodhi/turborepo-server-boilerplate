@@ -1,5 +1,5 @@
 import { type Response } from "express";
-import { ResponseDTO } from "../types";
+import { ResponseDTO } from "@repo/core/types";
 
 const response = (res: Response, data: ResponseDTO): Response => {
   const payload: ResponseDTO = {

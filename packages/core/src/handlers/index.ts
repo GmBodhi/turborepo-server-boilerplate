@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
-import { RoutesHandlerOptions, ResponseDTO } from "../types";
-import { response, exceptionResponse } from "../response";
+import { RoutesHandlerOptions, ResponseDTO } from "@repo/core/types";
+import { response, exceptionResponse } from "@repo/core/response";
 
 export const handleAsync = <T extends ResponseDTO>(
   fn: (req: Request, res: Response) => Promise<T>,

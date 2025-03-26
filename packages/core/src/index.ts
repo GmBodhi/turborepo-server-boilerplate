@@ -5,7 +5,7 @@ import session from "express-session";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { Emitter } from "strict-event-emitter";
-import { ServerCoreOptions, ServerCoreEvents } from "./types";
+import { ServerCoreOptions, ServerCoreEvents } from "@repo/core/types";
 
 class ServerCore extends Emitter<ServerCoreEvents> {
   app: ReturnType<typeof express> = express();
