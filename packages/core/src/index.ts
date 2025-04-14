@@ -29,7 +29,7 @@ class ServerCore extends Emitter<ServerCoreEvents> {
     this.app.use(express.json({ limit: "50mb" }));
     this.app.use(
       session({
-        secret: process.env.SESSION_SECRET!,
+        secret: process.env.SESSION_SECRET! || "session_secret",
         resave: false,
         saveUninitialized: false,
       }),

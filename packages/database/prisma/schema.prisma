@@ -8,8 +8,9 @@ generator client {
   output   = "../generated/client"
 }
 
-model Category {
-  categoryId    String        @id @unique @default(uuid())
-  name          String        @unique
-  thumbnail     String
+model Turtle {
+  turtleId Int    @id @default(autoincrement()) @map("turtle_id")
+  name     String @unique
+
+  @@map("turtles")
 }

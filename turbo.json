@@ -3,7 +3,13 @@
   "ui": "stream",
   "cacheDir": ".turbo",
   "globalDependencies": ["**/.env.*local", "pnpm-lock.yaml"],
-  "globalEnv": ["SESSION_SECRET", "CODE_SECRET", "NODE_ENV", "SERVER_URL"],
+  "globalEnv": [
+    "SESSION_SECRET",
+    "CODE_SECRET",
+    "NODE_ENV",
+    "SERVER_URL",
+    "DATABASE_URL"
+  ],
   "tasks": {
     "build": {
       "cache": false,
@@ -12,7 +18,18 @@
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
+    },
+    "start": {
+      "cache": false,
+      "persistent": true,
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
+    },
+    "pbulish": {
+      "cache": false,
+      "persistent": true,
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
     },
     "lint": {
       "dependsOn": ["^lint"],

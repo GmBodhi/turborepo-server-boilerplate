@@ -2,8 +2,8 @@ import { Router, Request, Response } from "express";
 import { RoutesHandlerOptions, ResponseDTO } from "@repo/core/types";
 import { response, exceptionResponse } from "@repo/core/response";
 
-export const handleAsync = <T extends ResponseDTO>(
-  fn: (req: Request, res: Response) => Promise<T>,
+export const wrapHandler = <T extends ResponseDTO>(
+  fn: (req: Request, res: Response) => T | Promise<T>,
 ) => {
   return async (req: Request, res: Response) => {
     try {
