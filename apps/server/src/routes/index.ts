@@ -1,5 +1,5 @@
-import type { Application } from "@repo/core/types";
-import { RoutesHandler } from "@repo/core/handlers";
+import type { Application } from "@xjectro/express/core/types";
+import { RoutesHandler } from "@xjectro/express/core/handlers";
 import Turtles from "./turtles.routes";
 
 export default class Routes {

@@ -3,13 +3,7 @@
   "ui": "stream",
   "cacheDir": ".turbo",
   "globalDependencies": ["**/.env.*local", "pnpm-lock.yaml"],
-  "globalEnv": [
-    "SESSION_SECRET",
-    "CODE_SECRET",
-    "NODE_ENV",
-    "SERVER_URL",
-    "DATABASE_URL"
-  ],
+  "globalEnv": ["SERVER_URL", "DATABASE_URL"],
   "tasks": {
     "build": {
       "cache": false,

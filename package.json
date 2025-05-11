@@ -1,11 +1,12 @@
 {
-  "name": "boilerplate",
+  "name": "turborepo-express",
   "private": true,
+  "author": "xjectro",
   "scripts": {
     "dev": "dotenv -e .env.dev -- turbo run dev",
     "start": "dotenv -e .env.prod -- turbo start",
     "build": "dotenv -e .env.prod turbo run build",
-    "publish": "dotenv -e .env.publish -- turbo publish",
+    "publish": "npx deloyn push",
     "db:migrate": "dotenv -e .env.dev turbo run db:migrate",
     "db:reset": "dotenv -e .env.dev turbo run db:reset",
     "db:generate:": "dotenv -e .env.dev turbo run db:generate",
@@ -15,11 +16,8 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
-    "@repo/core": "workspace:*",
-    "@repo/crypto": "workspace:*",
     "@repo/db": "workspace:*",
     "@repo/eslint-config": "workspace:*",
-    "@repo/jwt": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "dotenv-cli": "^8.0.0",
     "prettier": "^3.5.3",
@@ -29,5 +27,9 @@
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@xjectro/express": "^1.0.3",
+    "deloyn": "^1.0.10"
   }
 }

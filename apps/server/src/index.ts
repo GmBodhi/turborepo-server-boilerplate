@@ -1,5 +1,5 @@
 import Routes from "./routes";
-import Core, { express } from "@repo/core";
+import Core, { express } from "@xjectro/express/core";
 
 const core = new Core({ port: 3000, cors: { origin: "*" } });
 

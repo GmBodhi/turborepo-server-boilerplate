@@ -1,5 +1,6 @@
-import { wrapHandler } from "@repo/core/handlers";
+import { wrapHandler } from "@xjectro/express/core/handlers";
 import { createTurtle, deleteTurtle, getTurtles } from "@repo/db/services";
+
 export default class Controller {
   index = wrapHandler(async () => {
     const turtles = await getTurtles();

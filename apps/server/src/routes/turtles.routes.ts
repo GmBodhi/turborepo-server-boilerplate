@@ -1,5 +1,5 @@
-import type { Router } from "@repo/core/types";
-import { validate } from "@repo/core/middleware/validate";
+import type { Router } from "@xjectro/express/core/types";
+import { validate } from "@xjectro/express/core/middleware/validate";
 import Controller from "../controllers/turtles";
 import * as schema from "../utils/validation/turtles";
 

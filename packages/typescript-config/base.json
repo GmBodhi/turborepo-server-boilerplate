@@ -8,6 +8,6 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "moduleResolution": "bundler",
-    "types": ["node", "express", "@repo/typescript-config/types.d.ts"]
+    "types": ["node", "express"]
   }
 }
